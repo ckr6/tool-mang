@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles here */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.table-header {
+  background-color: #f8f8f8;
+}
+
+.table-row:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.table-row:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007BFF;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 2px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.overflow-y-auto {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+#view-modal, #asset-modal, #category-modal {
+  max-height: 90%;
+  width: 90%;
+  overflow-y: auto;
+}
+
+#category-fields, #fields-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.flex {
+  flex-wrap: wrap;
+}
+
+/* Adjustments to the form elements */
+#search {
+  width: 25%;
+  padding: 0.5rem 1rem;
+}
+
+#filter-status,
+#filter-category {
+  width: 20%;
+  padding: 0.5rem 1rem;
+}
+
+#add-asset-btn {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: #007BFF;
+  transition: background-color 0.3s;
+}
+
+#add-asset-btn:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Empréstimos</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">
+  <script defer src="/js/common.js"></script>
+  <script defer src="/js/loans.js"></script>
+</head>
+<body>
+  <div id="nav-container"></div>
+  
+  <div id="main-content">
+    <h1 class="text-2xl font-bold mb-6">Gestão de Empréstimos</h1>
+
+    <!-- Filtro para listar todos os empréstimos ou apenas os ativos -->
+    <div class="mb-4">
+      <label for="status-filter" class="block text-gray-700">Filtrar Empréstimos:</label>
+      <select id="status-filter" class="mt-1 block w-full border rounded p-2">
+        <option value="">Todos os Empréstimos</option>
+        <option value="ativos">Empréstimos Ativos</option>
+      </select>
+    </div>
+
+    <!-- Formulário para criar novo empréstimo -->
+    <div class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Novo Empréstimo</h2>
+      <form id="loan-form">
+        <label for="user-select" class="block text-gray-700">Usuário:</label>
+        <select id="user-select" class="mt-1 block w-full border rounded p-2">
+          <!-- Opções de usuários devem ser carregadas dinamicamente -->
+        </select>
+        <label for="asset-select" class="block text-gray-700">Ativo:</label>
+        <select id="asset-select" class="mt-1 block w-full border rounded p-2">
+          <!-- Opções de ativos devem ser carregadas dinamicamente -->
+        </select>
+        <label for="loan-date" class="block text-gray-700">Data do Empréstimo:</label>
+        <input type="date" id="loan-date" class="mt-1 block w-full border rounded p-2">
+        <label for="return-date" class="block text-gray-700">Data de Devolução:</label>
+        <input type="date" id="return-date" class="mt-1 block w-full border rounded p-2">
+        <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Criar Empréstimo</button>
+      </form>
+    </div>
+
+    <!-- Lista de empréstimos será inserida aqui -->
+    <div id="loan-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+  </div>
+</body>
+</html>
